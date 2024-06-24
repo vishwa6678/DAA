@@ -1,0 +1,24 @@
+#include <stdio.h>
+void findMinMaxSumDiff(int arr[], int size, int M, int N) {
+    int temp;
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
+            if (arr[i] < arr[j]) {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }}}
+    int sum = arr[M - 1] + arr[size - N];
+    int diff = arr[M - 1] - arr[size - N];
+    printf("M-th Maximum Number: %d\n", arr[M - 1]);
+    printf("N-th Minimum Number: %d\n", arr[size - N]);
+    printf("Sum: %d\n", sum);
+    printf("Difference: %d\n", diff);}
+int main() {
+    int arr[] = {3, 7, 1, 9, 5, 2, 6, 4, 8};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int M = 2; 
+    int N = 3;
+    findMinMaxSumDiff(arr, size, M, N);
+    return 0;
+}
