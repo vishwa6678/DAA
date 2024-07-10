@@ -1,0 +1,8 @@
+empty_list=[]
+one_element=[1]
+identical_element=[4,4,4,4]
+negative_element=[-1,-2,-3,-4]
+print(empty_list)
+print(one_element)
+print(identical_element)
+print(negative_element)
