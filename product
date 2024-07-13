@@ -1,0 +1,15 @@
+x=1234
+y=1234
+xx=str(x)
+yy=str(y)
+n=len(xx)
+a=int(xx[:-2])
+b=int(xx[2:])
+c=int(yy[:-2])
+d=int(yy[2:])
+t1=a*c*(10**n)
+t2=b*c*(10**(n//2))
+t3=a*d*(10**(n//2))
+t4=b*d
+p=t1+t2+t3+t4;
+print("PRODUCT = ",p)
